@@ -21,7 +21,7 @@ public class Hero4 {
 
     //复活
     public void revive(Hero4 h){
-        h = new Hero4("提莫",383);
+        h.hp=383;
     }
 
     public static void main(String[] args) {
@@ -32,7 +32,7 @@ public class Hero4 {
 
         teemo.revive(teemo);
 
-        //问题： System.out.println(teemo.hp); 输出多少？ 怎么理解？
+        System.out.println(teemo.hp);
 
     }
 
