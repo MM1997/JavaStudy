@@ -1,24 +1,27 @@
 package javaBasis.chapter7.leiheduixiang.charactor;
 
 public class Hero {
-    public String name; //实例属性，对象属性，非静态属性
-    protected float hp;
-    static String copyright;//类属性,静态属性
+    /**
+     * 声明该属性的时候初始化
+     */
+    public String name=Hero.getName("属性声明");
 
-    public static void main(String[] args) {
-        Hero garen =  new Hero();
-        garen.name = "盖伦";
-
-        garen.copyright = "版权由Riot Games公司所有1";
-
-        System.out.println(garen.name);
-        System.out.println(Hero.copyright);
-
-        Hero teemo =  new Hero();
-        teemo.name = "提莫";
-        System.out.println(teemo.name);
-        System.out.println(Hero.copyright);
-
+    public Hero(){
+//        构造方法中初始化块
+        name = Hero.getName("构造方法");
+    }
+    {
+//        初始化块
+        name = Hero.getName("初始化块");
     }
 
+    public static String getName(String pos) {
+        String result ="name" +pos;
+        System.out.println(result);
+        return result;
+    }
+
+    public static void main(String[] args) {
+        Hero h = new Hero();
+    }
 }

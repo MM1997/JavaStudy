@@ -19,6 +19,5 @@ public class support extends Hero {
     public static void main(String[] args) {
         support teemo = new support();
         teemo.name="提莫";
-        teemo.hp=43;
     }
 }
