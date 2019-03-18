@@ -1,15 +1,15 @@
 package javaBasis.chapter7.leiheduixiang.charactor;
 
-public class ADHero extends Hero implements AD, Mortal {
+public class ADHero extends Hero implements AD ,Mortal{
 
     @Override
-    public void physicAttack(){
+    public void physicAttack() {
 
     }
 
     @Override
     public void die() {
-        System.out.println(name+"这个物理英雄挂了");
+        System.out.println(name+ " 这个物理英雄挂了");
     }
 
 }

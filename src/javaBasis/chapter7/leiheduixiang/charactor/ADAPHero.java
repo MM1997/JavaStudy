@@ -1,18 +1,22 @@
 package javaBasis.chapter7.leiheduixiang.charactor;
 
-public class ADAPHero extends Hero implements AP, AD, Mortal {
+public class ADAPHero extends Hero implements AD,AP,Mortal{
 
     @Override
     public void magicAttack() {
+        // TODO Auto-generated method stub
+
     }
 
     @Override
-    public static physicAttack() {
-
-    @Override
-    public static die() {
-            System.out.println(name + "ADAP");
-        }
-
+    public void physicAttack() {
+        // TODO Auto-generated method stub
 
     }
+
+    @Override
+    public void die() {
+        System.out.println(name+ " 这个混合英雄挂了");
+    }
+
+}

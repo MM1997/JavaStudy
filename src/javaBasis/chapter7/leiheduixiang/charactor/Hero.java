@@ -1,27 +1,30 @@
 package javaBasis.chapter7.leiheduixiang.charactor;
 
 public class Hero {
-    /**
-     * 声明该属性的时候初始化
-     */
-    public String name=Hero.getName("属性声明");
+    public String name;
+    protected float hp;
 
-    public Hero(){
-//        构造方法中初始化块
-        name = Hero.getName("构造方法");
-    }
-    {
-//        初始化块
-        name = Hero.getName("初始化块");
-    }
-
-    public static String getName(String pos) {
-        String result ="name" +pos;
-        System.out.println(result);
-        return result;
+    public void kill(Mortal m){
+        System.out.println(name + " 放了一个大招" );
+        m.die();
     }
 
     public static void main(String[] args) {
-        Hero h = new Hero();
+        Hero h =new Hero();
+        h.name = "盖伦";
+
+        ADHero ad = new ADHero();
+        ad.name = "艾希";
+
+        APHero ap = new APHero();
+        ap.name = "安妮";
+
+        ADAPHero adap = new ADAPHero();
+        adap.name = "库奇";
+
+        h.kill(ad);
+        h.kill(ap);
+        h.kill(adap);
+
     }
 }
