@@ -1,9 +1,12 @@
 package javaBasis.chapter7.leiheduixiang.charactor;
 
-public class APHero extends Hero implements AP{
-    @Override
+public class APHero extends Hero implements AP,Mortal{
     public void magicAttack(){
-        System.out.println("进行魔法攻击");
+
+    }
+    @Override
+    public void die(){
+        System.out.println(name+"这个魔法英雄挂了");
     }
 
 }
